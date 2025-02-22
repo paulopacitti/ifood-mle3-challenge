@@ -11,14 +11,15 @@ logging.basicConfig(
 
 def format_dataset(example):
     return {
-        "input": example["code"],
-        "target": example["language_name"],
+        "label": example["label"],
+        "text": example["text"],
     }
 
 
 def main(dataset_id, train_test_split_ratio):
     logging.info("Loading dataset...")
     dataset = load_dataset(dataset_id, split="train", trust_remote_code=True)
+    dataset = dataset.shuffle().select(range(1000))
     dataset = dataset.train_test_split(float(train_test_split_ratio))
     train_data, test_data = dataset["train"], dataset["test"]
 
@@ -44,7 +45,7 @@ if __name__ == "__main__":
         "--train-test-split-ratio",
         type=float,
         required=True,
-        help="The train-test split ratio (from 0 to 0.9).",
+        help="The train-test split ratio (from 0.01 to 0.99).",
     )
 
     args = parser.parse_args()

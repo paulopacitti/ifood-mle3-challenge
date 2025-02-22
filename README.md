@@ -8,3 +8,4 @@ BUILDING. LOCKED IN. WAIT UNTIL TUESDAY
 ## Log
 
 - `2025-02-21T16:57:22-03:00`: uploading the data transform pipeline
+- `2025-02-23T12:56:42-03:00`: change dataset and added train script
