@@ -34,5 +34,5 @@ jobs:
       with:
         name: miniml-data-output
         path: miniml/data/output/
-        retention-days: 1
+        retention-days: 3
         overwrite: true

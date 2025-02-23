@@ -95,7 +95,7 @@ class Trainer:
         logging.info("Finished training.")
 
     def save(self, path):
-        logging.info("Saving model.")
+        logging.info(f"Saving model to {path}.")
         self.tokenizer.save_pretrained(path)
         self.model.save_pretrained(path)
         logging.info("Saved model.")
