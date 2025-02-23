@@ -5,3 +5,4 @@ __pycache__
 # job outputs folders
 output/
 shared/
+models/
