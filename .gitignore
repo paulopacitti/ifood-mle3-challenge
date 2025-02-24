@@ -6,3 +6,6 @@ __pycache__
 output/
 shared/
 models/
+
+# macOS
+.DS_Store
