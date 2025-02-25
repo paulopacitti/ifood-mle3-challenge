@@ -53,6 +53,12 @@ docker run -p 8000:8000 ghcr.io/paulopacitti/ifood-mle3-challenge/miniml-api:lat
 
 It contains a documentation implemented with Swagger that can be accessed in `localhost:8000/docs` once the container starts running.
 
+There's also a version trained locally with MPS (Metal Perfomance Shaders) with a 1000 steps and `batch_size = 8`, lasting ~40 minutes, training loss at 0.4787183036804199. This is the version with the best accuracy. It can be run locally with:
+
+```sh
+docker run -p 8000:8000 ghcr.io/paulopacitti/ifood-mle3-challenge/miniml-api:1000-steps
+```
+
 ## cloud: AWS infrastructure proposal for miniml
 
 ![](/docs/aws.png)
